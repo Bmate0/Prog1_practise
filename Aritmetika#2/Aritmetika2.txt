@@ -1,0 +1,25 @@
+Aritmetikai műveletek #2
+
+Írjon programot, amely a standard bemenetről egész számokat és a C programozási nyelv operátorait olvassa soronként, 
+majd a beolvasott értékeken elvégzi az operátor által jelzett műveletet, és a standard kimenetre írja az eredményt!
+
+A bemenet specifikációja:
+A bemenet sorainak mindegyike egy-egy tesztesetet ír le állományvégjelig (EOF). Minden teszteset egy „x op y” formátumú sor, 
+ahol x és y egész számok, míg op a C programozási nyelv egész típusú operandusokra alkalmazható alábbi 
+aritmetikai operátorainak egyike: +, -, *, /, %. Az operandusok az operátortól egy-egy szóközzel vannak elválasztva.
+
+A kimenet specifikációja:
+A programnak minden tesztesetre egy sort kell kiírnia, amely a tesztesetben megadott x op y művelet eredményét tartalmazza.
+Példa bemenet
+    5 + -5
+    165 - -10
+    -5 * -2
+    23 / 8
+    25 % 3
+
+A példa bemenethez tartozó kimenet
+    0
+    175
+    10
+    2
+    1
