@@ -1,0 +1,40 @@
+1. 
+Kódrészlet,Karakter neve
+int x = 10;,Változó Vlad
+int* p = &x;,Pointer Pete
+void f(int x) { x=99; },Xerox Chad (érték szerinti átadás)
+void f(int& x) { x=99; },Key Dealer Kevin (referencia szerinti átadás)
+int* p = nullptr;,Null Nick
+{ int n=5; } // n meghal,Scope Sensei
+"template<T> T add(T a, T b)",Generic Greg
+return n * f(n-1);,Recursion Rick
+
+2. Töltsd ki a hiányzó részeket!
+a) Xerox Chad
+int chad = 5; (Bármilyen számot írhatsz ide, pl. a kódpéldában 5 szerepel).
+// chad értéke még mindig: 5 (mivel csak a másolat változott meg a függvényben).
+b) Pointer Pete
+// kimenet: 77 (mivel a *pete = 77 sor közvetlenül átírta az ertek változó tartalmát a memóriacímen keresztül).
+c) Recursion Rick
+if (n == 0) return 1; (vagy az összegzésnél gyakran: if (n == 0) return 0;)
+// osszeg(4) = 4+3+2+1+0 = 10
+
+03 Melyik Boss Karakter jelenik meg? — Hibák azonosítása
+a) int* p = nullptr; printf("%d", *p);
+Boss: Segfault Samu (vagy Null Nick hibás használata).
+Miért: Mert egy null mutatót (nullptr) próbálunk dereferenciálni (kiolvasni az értékét), ami érvénytelen memóriahozzáférés.
+b) int* p = (int*)malloc(sizeof(int)); *p = 42; // ... free() soha nem hívódik
+Boss: Memory Leak Miki
+Miért: Mert foglaltunk memóriát a heap-en, de nem szabadítottuk fel, így az a memória "elveszett" a rendszer számára.
+c) int vegtelen(int n) { return vegtelen(n); }
+Boss: Stack Overflow Stan
+Miért: Mert a függvény végtelenül hívja önmagát (Recursion Rick elfelejtette a base case-t), és a call stack (verem) betelik.
+
+04 Saját Brainrot Karakter — Rövid esszé
+Név: Const Connie
+Fogalom: const módosító
+Személyiség: Connie egy rendkívül makacs és konzervatív karakter. Ha egyszer kijelent valamit, onnantól kezdve senki nem veheti rá a változtatásra. Biztonsági őrnek képzeli magát, aki megvédi az értékeket a véletlen átírástól. Ha megpróbálod megváltoztatni a véleményét, azonnal panaszt tesz a Fordítónál.
+Idézet: "Megmondtam, hogy nem! Amit egyszer leírtam, az kőbe van vésve."
+Kódpélda:
+const int max_elet = 100;
+max_elet = 110; // ✗ HIBA: Connie nem engedi a változtatást!
